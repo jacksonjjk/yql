@@ -70,6 +70,8 @@ function init(){
 	
 }	
 
+var htmlFontSize = document.getElementsByTagName('html')[0];
+htmlFontSize.style.fontSize = window.innerWidth/18.75 + "px";
 
 var myApp = angular.module('myApp', ['ui.router']);
 
@@ -105,6 +107,8 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 	})
 
 })
+
+			
 
 myApp.controller("myController",["$scope","$http",function($scope,$http){
 	$http({

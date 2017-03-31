@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 20px">
+<html lang="en">
 <!-- 18.75 * fontsize = 屏幕宽度 -->
 
 <head>
@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/classification.css">
-    <script src="../libs/jquery.js"></script>
     <script src="../libs/angular.min.js"></script>
     <script src="../libs/angular-ui-router.min.js"></script>
     <script src="../libs/swiper.min.js"></script>
@@ -36,91 +35,87 @@
         <div data-ui-view="">
             <div id="wrapper">
                 <div id="scroller" class="cContent">
-                    <ul >
-                    	<li>
-                    		<p>热门品牌</p>
-                    		<div class="swiper-hot" style="width:12rem;height:3rem">
-                    		    <div class="cHot swiper-wrapper clear">
-                    		        <a href="../qrcode_for_gh_59dd14d4279d_430.jpg" class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'hots'}">
-                    		            <img ng-src={{i.img}} alt="{{i.name}}">
-                    		            <br>{{i.name}}
-                    		        </a>
-                    		    </div>
-                    		</div>
-                    	</li>
-                    	<li>
-                    		<p>运动鞋</p>
-                    		<div class="cGoods clear">
-                    		    <a href="http://www.baidu.com" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'sportshoe'}">
-                    		        <img ng-src={{i.img}} alt="{{i.name}}">
-                    		        <br>{{i.name}}
-                    		    </a>
-                    		</div>
-                    	</li>
-                    	<li>
-                    		<p>运动服</p>
-                    		<div class="cGoods clear">
-                    		    <a href="#" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'cloth'}">
-                    		        <img ng-src={{i.img}} alt="{{i.name}}">
-                    		        <br>{{i.name}}
-                    		    </a>
-                    		</div>
-                    	</li>
-                    	<li>
-                    		<p>运动包配</p>
-                    		<div class="cGoods clear">
-                    		    <a href="#" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'baopei'}">
-                    		        <img ng-src={{i.img}} alt="{{i.name}}">
-                    		        <br>{{i.name}}
-                    		    </a>
-                    		</div>
-                    	</li>
+                    <ul>
+                        <li>
+                            <p>热门品牌</p>
+                            <div class="swiper-hot" style="width:12rem;height:3rem">
+                                <div class="cHot swiper-wrapper clear">
+                                    <a href="../qrcode_for_gh_59dd14d4279d_430.jpg" class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'hots'}">
+                                        <img ng-src={{i.img}} alt="{{i.name}}">
+                                        <br>{{i.name}}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>运动鞋</p>
+                            <div class="cGoods clear">
+                                <a href="http://www.baidu.com" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'sportshoe'}">
+                                    <img ng-src={{i.img}} alt="{{i.name}}">
+                                    <br>{{i.name}}
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>运动服</p>
+                            <div class="cGoods clear">
+                                <a href="#" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'cloth'}">
+                                    <img ng-src={{i.img}} alt="{{i.name}}">
+                                    <br>{{i.name}}
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <p>运动包配</p>
+                            <div class="cGoods clear">
+                                <a href="#" ng-repeat="i in response| filter:{'pagename':'sportsLife','class':'baopei'}">
+                                    <img ng-src={{i.img}} alt="{{i.name}}">
+                                    <br>{{i.name}}
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-
-
-    
-        <ul class="footer_nav">
+    <ul class="footer_nav">
         <li>
             <a href="http://localhost:88/index/index.html">
-            <span>            
+                <span>            
                 <img src="images/hui_1.png" alt="">           
-            </span>  
+            </span>
             </a>
-        </li> 
+        </li>
         <li>
             <a href="#">
-            <span>             
+                <span>             
             <img src="images/hong_2.png" alt="">                   
-            </span>  
+            </span>
             </a>
-        </li> 
+        </li>
         <li>
             <a href="http://localhost:88/app/html/specialSell.html">
-            <span>                 
-                <img src="images/hui_3.png" alt="">                      
-            </span>  
+                <span>                 
+                <img src="images/hui_3.png" alt="">            
+            </span>
             </a>
-        </li> 
+        </li>
         <li>
             <a href="http://localhost:88/connect/html/goods.html">
-            <span>            
+                <span>            
              <img src="images/hui_4.png" alt="">                   
-            </span>  
+            </span>
             </a>
-        </li> 
+        </li>
         <li>
             <a href="http://localhost:88/login/login2.html">
-            <span>            
+                <span>            
                  <img src="images/hui_5.png" alt="">                 
-            </span>  
+            </span>
             </a>
-        </li> 
+        </li>
     </ul>
 </body>
+
 </html>
