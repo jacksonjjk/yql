@@ -125,6 +125,23 @@ div,figure{
     z-index: 1000;
 }
 
+@media screen and (min-width: 414px) and (max-width: 768px) {
+  html{font-size: 40px;}
+}
+@media screen and (min-width: 375px) and (max-width: 414px) {
+  html{font-size: 22px;}
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  html{font-size: 20px;}
+}
+@media screen and (max-width: 320px){
+  html{font-size: 17px;}
+}
+
+
+
+
+
 
 
 .footer_nav{
@@ -154,13 +171,13 @@ div,figure{
     position:absolute;
     bottom:0;
     left:4%;
-    
+
 }
 .footer_nav li:nth-child(2){
     position:absolute;
     bottom:0;
     left:22%;
-    
+
 }
 .footer_nav li:nth-child(3){
     width:4.323429rem;
