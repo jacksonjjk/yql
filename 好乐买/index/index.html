@@ -17,7 +17,6 @@
             var htmlFontSize = document.getElementsByTagName('html')[0];
             htmlFontSize.style.fontSize = window.innerWidth/23.4375 + "px";
         }
-        //宽度改变时样式错乱bug修复
         window.addEventListener('resize',cUpdate);
     </script>
 </head>
@@ -30,7 +29,8 @@
 
 	<div class="search clearfix">
 		<div><img src="images/logo.png" alt="" style="width:5.0rem;height:3.125rem"></div>
-		<div><input type="text" style="width:11.0rem;height:1.3rem"></div>
+		<div><input type="text" style="width:11.0rem;height:1.3rem"><img src="images/indexsearch.png" alt="" style="width:1.25rem;height:1.375rem;margin-left:-1.875rem;margin-top:-0.225rem
+        ;vertical-align: middle;"></div>
 		<div><img src="images/goindex.png" alt=""  style="width:3.125rem;height:3.125rem"></div>
 	</div>
 	<div class="swiper-container">
