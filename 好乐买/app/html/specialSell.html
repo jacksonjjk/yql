@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>好乐买</title>
@@ -10,12 +9,20 @@
 		<script src="../lib/angular.min.js"></script>
 		<script src="../js/lazyload/jquery.lazyload.min.js"></script>
 		<script src="../js/lazyload/jquery.scrollstop.min.js"></script>
+		<script>
+		    cUpdate()
+		    function cUpdate(){
+		        var htmlFontSize = document.getElementsByTagName('html')[0];
+		        htmlFontSize.style.fontSize = window.innerWidth/18.7045187 + "px";
+		    }
+		    window.addEventListener('resize',cUpdate);
+		</script>
 	</head>
 
 	<body>
 		<div class="outlets-box">
-			<div class="outletsfilter" id="outletshd" style="width: 412px;">
-				<div class="outletsin" style="width: 423px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+			<div class="outletsfilter" id="outletshd" style="width: 18.750028rem;">
+				<div class="outletsin" style="width: 19.250636rem; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
 					<a class="current" data-cat="all">全部</a>
 					<a data-cat="5">最新</a>
 					<a data-cat="1">鞋类</a>
@@ -33,7 +40,7 @@
 			</div>
 		</div>
 		
-		<div id="gotop" style="bottom: 74px; display: none;">
+		<div id="gotop" style="bottom: 3.367724rem; display: none;">
 		</div>
 
 
