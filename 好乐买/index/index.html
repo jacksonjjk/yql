@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网上买鞋子哪个网站好？上好乐买网上鞋城，正品鞋购物网站-好乐买官网</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<script src="jquery.js"></script>
+	<script src="jquery.cxslide.min.js"></script>
+	<script src="angular.min.js"></script>
+	<script>
+		$(function(){
+			$('#cxslide_fade').cxSlide({
+                events: 'mouseover',
+                type: 'fade',
+                speed: 200,
+                time:2000,
+                
+            });
+            $('.btn li').html("");
+		})
+	</script>
+</head>
+<body>
+	<div class="appdownload">
+		<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.okbuy.activity">
+		    <img src="images/appdownload.png" alt="">
+		</a>
+	</div>
+
+	<div class="search">
+		<div><img src="images/logo.png" alt=""></div>
+		<div><input type="text"></div>
+		<div><img src="images/goindex.png" alt=""></div>
+	</div>
+
+	<div class="example">
+				
+				<div id="cxslide_fade" class="cxslide_fade">
+					<div class="box">
+						<ul class="list">
+							<li><a href="#">
+								<img src="images/lunbotu_1.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_2.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_3.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_4.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_5.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_6.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_7.jpg">
+								
+							</a></li>
+							<li><a href="#">
+								<img src="images/lunbotu_8.jpg">
+								
+							</a></li>
+						</ul>
+					</div>
+					
+				</div>
+	</div>
+
+    <div class="nav">
+    	<div><img src="images/1.gif" alt=""></div>
+    	<div><img src="images/2.png" alt=""></div>
+    	<div><img src="images/3.png" alt=""></div>
+    	<div><img src="images/4.png" alt=""></div>
+    </div>
+
+    
+	<div class="ad">
+	    <img src="images/dk1.jpg" alt="">
+	    <img src="images/dk2.jpg" alt="">
+        <img src="images/dk3.jpg" alt="">
+	</div>
+
+
+	<div class="daohang"> 
+		<a href="#">全部</a>
+		<a href="#">服饰</a>
+		<a href="#">鞋类</a>
+		<a href="#">包配</a>
+		<a href="#">儿童</a>
+		<a href="#">最新</a>			 
+    </div>
+
+
+    <div class="list" ng-app="dkApp" ng-controller="dkController">
+    	<ul ng-repeat="n in shuju">
+    		<li>
+    			<img ng-src="{{n.img}}" alt="">
+    			<p>
+    				<span>{{n.price}}</span>
+    				{{n.introduction}}   
+    			</p>
+    		</li>
+    	</ul>
+    </div>
+
+
+
+
+
+    <ul class="footer_nav">
+		<li>
+            <a href="#">
+            <span>            
+                <img src="images/hong_1.png" alt="">             
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="http://localhost:88/page/classification.html">
+            <span>             
+            <img src="images/hui_2.png" alt="">                   
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="/outletswall">
+            <span>                 
+                <img src="images/hui_3.png" alt="">                      
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="/cart">
+            <span>            
+             <img src="images/hui_4.png" alt="">                   
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="http://localhost:88/login/login2.html">
+            <span>            
+                 <img src="images/hui_5.png" alt="">                 
+            </span>  
+            </a>
+        </li> 
+    </ul>
+    
+
+
+
+<footer>
+	<div class="otFooter_2">
+		<p><a href="http://www.okbuy.com">电脑版</a><span>触屏版</span><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.okbuy.activity">客户端</a></p>
+		<p>©2007-2017 OkBuy.com 津ICP备16005872号-1</p>
+	</div>
+</footer>
+
+</body>
+</html>
+<script>
+	var dkApp = angular.module('dkApp', []);
+	var dkController = dkApp.controller('dkController', ['$scope', '$http', function ($scope, $http) {
+        $http.get('http://localhost:88/index/index').success(function (response) {
+                $scope.shuju= response;
+                
+             
+            });
+
+	}])
+</script>

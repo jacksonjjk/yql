@@ -1,0 +1,208 @@
+*{
+	padding: 0;
+	margin:0;
+}
+body{
+	background: #f5f5f5;
+}
+input{
+	border: none;
+	outline: medium;
+}
+header{
+	position: relative;
+	background: #f5f5f5;
+	font-family: '黑体',Arial,SimSun,Helvetica,sans-serif;
+}
+header .headerback{
+    position:absolute;
+    top:0;
+    left:0;
+}
+header img{
+	height:50px;
+}
+header .headername {
+	display:block;
+	position:relative;
+	top:0;
+	left:0;
+    width:100%;
+    height: 50px;
+    line-height:50px;
+    text-align: center;
+    font-size:120%;
+}
+header .index{
+	position:absolute;
+    top:0;
+    right:0;
+}
+.OB_clearB{
+	height: 15px;
+	width:100%;
+	background: #eee;
+}
+
+.login-input-wrap{
+	width:100%;
+    height:55px;
+    line-height:55px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    background:white;
+}
+.login-namelabel{
+	text-align: center;
+	width:65px;
+	height:55px;
+	font-size:80%;
+}
+.register-input{
+	position:absolute;
+	top:0;
+	left:70px;
+	height:55px;
+	width:65%;
+    line-height: normal;
+    padding:0 8px;
+    color: #333;
+    font-size:90%;
+}
+.registericon{
+	position:absolute;
+	top:10px;
+	right:0;
+	width:100px;
+	height:40px;
+	background:url("../img/验证码.png") no-repeat -7px -3px;
+}
+.loginmethod{
+	position:relative;
+	width:100%;
+	height:80px;
+}
+.loginshow1{
+	position:absolute;
+	top:30px;
+	left:8px;
+	display: block;
+    padding-left: 1.15rem;
+    height: 1rem;
+    line-height: 1rem;
+    background: url("../img/prothumb.png") -11.5rem -2.35rem no-repeat;
+    background-size: 12.5rem 12.5rem;
+    color: #333;
+    }
+.loginshow{
+	position:absolute;
+	top:30px;
+	right:8px;
+    display: block;
+    padding-left: 1.15rem;
+    height: 1rem;
+    line-height: 1rem;
+    background: url("../img/prothumb.png") -11.5rem -1.15rem no-repeat;
+    background-size: 12.5rem 12.5rem;
+    color: #999;
+}
+.purplebtn{
+    margin-left:5%;
+    width: 90%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: .2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #d70057;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.otherabout{
+	position:relative;
+	width:100%;
+}
+.fastlogin{
+	position:absolute;
+	top:18px;
+	left:18px;
+	display: block;
+    padding-left: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    color: #666;
+    font-size: .7rem;
+    background: url("../img/prothumb.png") -11.9rem 0 no-repeat;
+    background-size: 12.5rem 12.5rem;
+}
+.forgetpassword{
+	position:absolute;
+	top:18px;
+	right:18px;
+	display: block;
+    height: .75rem;
+    line-height: .75rem;
+    color: #666;
+    font-size: .7rem;
+}
+.wayshead img{
+	margin-top: 70px;
+	width:100%;
+	height:28px;
+}
+
+.waysbody{
+	margin-top:30px;
+	position:relative;
+}
+.waysbody img{
+	width:55px;
+	height:55px;
+}
+.flexway1{
+	position:absolute;
+	top:0;
+	left:14%;
+}
+.flexway2{
+	position:absolute;
+	top:0;
+	left:43%;
+}
+.flexway3{
+	position:absolute;
+	top:0;
+	left:72%;
+}
+
+
+
+
+
+footer {
+	margin-top:150px;
+	width:100%;
+    padding-top: .8rem;
+    padding-bottom: .5rem;
+    background: #e7e7e7;
+}
+footer p a {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+footer p{
+	width: 100%;
+    text-align: center;
+    font-size: .8rem;
+    color: #b3b3b3;
+    line-height: 1.5rem;
+}
+footer p span {
+    margin-right: 1.2rem;
+    font-size: 1rem;
+    color: #c4466c;
+    margin-left: 1.2rem;
+}
+
+

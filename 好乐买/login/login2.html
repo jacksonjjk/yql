@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>登录-好乐买触屏版</title>
+	<link rel="stylesheet" href="login2.css">
+    <script src="../libs/jquery-2.1.1.min.js"></script>
+    <script src="../libs/angular.min.js"></script>
+    <script src="common.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="mycontroller">
+	<header>
+	  <span class="headername">登录</span>
+	  <a href="/" class="headerback"><img src="../img/back.png" alt=""></a>
+	  <a href="http://t.okbuy.com/" class="index"><img src="../img/goindex.png" alt=""></a>
+	  <div class="OB_clearB"></div>
+	</header>
+
+
+    <div class="contentbox">
+	<!-- 输入账号 -->
+        <div class="login-input-wrap" id="pwd-login">
+        <div class="login-namelabel">账号</div>
+        <input type="text" placeholder="用户名/邮箱/手机号" id="username" name="username" class="register-input" ng-model="name"/>
+        <span class="del-input"><b></b></span>
+        </div>
+    <!-- 输入密码 -->
+	     <div class="login-input-wrap">
+	        <div class="login-namelabel">密码</div>
+	        <input type="password" placeholder="请输入6-16个字符，数字及字母组合" autocomplete="off" id="password"  name="password" class="register-input" ng-model="psw"/>
+	        <span class="del-input pasdel"><b></b></span>
+	        <span class="toggle-showhide-icon"><b class="hide"></b></span>
+	     </div>
+    <!-- 输入验证码 -->
+	    <div class="login-input-wrap">
+            <div class="login-namelabel">图形验证码</div>
+            <input type="tel" placeholder="请输入验证码" id="geticoncode" class="register-input" />
+            <span class="del-input icondel"><b></b></span>
+            <span class="registericon">
+            </span>
+       </div>
+    <!-- 登录方式 -->
+       <div class="loginmethod">
+            <div id="passwordway" class="loginshow1">
+                <span class="current">密码登录</span>
+            </div>
+            <div id="mobileway" class="loginshow">
+                <span >手机验证码登录</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录 -->
+    <input type="button" value="登录" id="loginbtn" class="purplebtn" ng-click="Btn()"/>
+    <!-- 快速 -->
+    <div class="otherabout">
+        <div class="fastlogin">
+            <a href="http://localhost:88/register/register.html"><span>快速注册</span></a>
+        </div>
+        <div class="forgetpassword">
+            <span>忘记密码？</span>
+        </div>
+    </div>
+    <!-- 分割线 -->
+    <div class="wayshead">
+        <img src="../img/otherways.png" alt=""/>
+    </div>
+
+    <!-- 联合登录 -->
+    <div class="waysbody">
+        <div class="flexway1">
+            <a href="/third_party/login/newqq/API/index.php">
+                <img src="../img/qq.png" alt=""/>
+            </a>
+        </div>
+        <div class="flexway2">
+            <a href="/third_party/login/alipay_login/auth_authorize.php">
+                <img src="../img/zhifubao.png" alt=""/>
+            </a>
+        </div>
+        <div class="flexway3">
+            <a href="/third_party/login/sinaweibo?jumpurl=">
+                <img src="../img/weibo.png" alt=""/>
+            </a>
+        </div>
+    </div>
+
+
+    <footer>
+	<div class="otFooter_2">
+		<p><a href="http://www.okbuy.com">电脑版</a><span>触屏版</span><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.okbuy.activity">客户端</a></p>
+		<p>©2007-2017 OkBuy.com 津ICP备16005872号-1</p>
+	</div>
+</footer>
+
+  
+
+
+</body>
+</html>
+<script>
+	window.onload = function(){
+		var erweima = document.getElementsByClassName('registericon')[0];
+
+		var heng = [-7,-113,-221,-330,-438,-545];
+		var lie = [-3,-59,-118,-180];
+        erweima.onclick = function(){
+        	var a = heng[parseInt(Math.random()*6)];
+        	var b = lie[parseInt(Math.random()*4)];
+        	this.style.background = 'url("../img/验证码.png") no-repeat '+a+'px '+b+'px';
+        }
+	}
+
+    var myApp = angular.module('myapp',['commonApp']);
+    myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
+
+
+        $scope.Btn =function(){
+
+
+            console.log($scope.name)
+            console.log($scope.psw)
+
+            
+            $http({
+                url:'http://localhost:88/'+'login/login2',
+                data:{name:$scope.name,password:$scope.psw},
+                method:'post'
+              }).success(function(data){
+                    
+              if(data.length>0){
+                alert(data);
+              }else{
+                alert("登录成功");
+                location.href = "http://localhost:88/index/index.html";
+              }
+               
+             })
+        }
+     
+    }]) ;
+  
+
+
+
+</script>
