@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size:16px">
 <head>
 	<meta charset="UTF-8">
 	<title>网上买鞋子哪个网站好？上好乐买网上鞋城，正品鞋购物网站-好乐买官网</title>
@@ -11,6 +11,17 @@
 	<script src="jquery.cxslide.min.js"></script>
 	<script src="angular.min.js"></script>
 	<script src="../libs/swiper.min.js"></script>
+    <script>
+        onload = function(){
+            cUpdate()
+            function cUpdate(){
+                var htmlFontSize = document.getElementsByTagName('html')[0];
+                htmlFontSize.style.fontSize = window.innerWidth/23.4375 + "px";
+            }
+            //宽度改变时样式错乱bug修复
+            window.addEventListener('resize',cUpdate);
+        }
+    </script>
 </head>
 <body>
 	<div class="appdownload">
@@ -20,9 +31,9 @@
 	</div>
 
 	<div class="search">
-		<div><img src="images/logo.png" alt=""></div>
-		<div><input type="text"></div>
-		<div><img src="images/goindex.png" alt=""></div>
+		<div><img src="images/logo.png" alt="" style="width:5.0rem;height:3.125rem"></div>
+		<div><input type="text" style="width:11.0rem;height:1.3rem"></div>
+		<div><img src="images/goindex.png" alt=""  style="width:3.125rem;height:3.125rem"></div>
 	</div>
 
 	<!-- <div class="example"> -->
