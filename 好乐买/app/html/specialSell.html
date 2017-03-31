@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>好乐买</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/specialSell.css" />
+		<script src="../js/jquery.js"></script>
+		<script src="../lib/angular.min.js"></script>
+		<script src="../js/lazyload/jquery.lazyload.min.js"></script>
+		<script src="../js/lazyload/jquery.scrollstop.min.js"></script>
+	</head>
+
+	<body>
+		<div class="outlets-box">
+			<div class="outletsfilter" id="outletshd" style="width: 412px;">
+				<div class="outletsin" style="width: 423px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+					<a class="current" data-cat="all">全部</a>
+					<a data-cat="5">最新</a>
+					<a data-cat="1">鞋类</a>
+					<a data-cat="2">服饰</a>
+					<a data-cat="3">包配</a>
+					<a data-cat="4">儿童</a>
+				</div>
+			</div>
+
+			<div class="outletsbody" ng-app="dcApp" ng-controller="dcController">
+				<a href="http://localhost:88/app/index/goodList.html" ng-repeat="value in dataset">
+					<div class="outletspic"><img class="lazy" ng-src="../img/{{value.uimg}}" alt=""></div>
+					<p class="outletsinfo"><span class="outlets-discount">{{value.price}}</span><span class="outlets-topic">{{value.content}}</span><span class="outlets-time">{{value.date}}</span></p>
+				</a>
+			</div>
+		</div>
+		
+		<div id="gotop" style="bottom: 74px; display: none;">
+		</div>
+
+
+		<ul class="footer_nav">
+		<li>
+            <a href="http://localhost:88/index/index.html">
+            <span>            
+                <img src="images/hui_1.png" alt="">             
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="http://localhost:88/page/classification.html">
+            <span>             
+            <img src="images/hui_2.png" alt="">                   
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="#">
+            <span>                 
+                <img src="images/hong_3.png" alt="">                      
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="/cart">
+            <span>            
+             <img src="images/hui_4.png" alt="">                   
+            </span>  
+            </a>
+        </li> 
+        <li>
+            <a href="http://localhost:88/login/login2.html">
+            <span>            
+                 <img src="images/hui_5.png" alt="">                 
+            </span>  
+            </a>
+        </li> 
+    </ul>
+
+		<script type="text/javascript">
+			var dcApp = angular.module('dcApp', []);
+			var dcController = dcApp.controller('dcController', ['$scope', '$http', function($scope, $http) {
+				$http.get('http://localhost:88/banner').success(function(response) {
+					console.log(response);
+					console.log(response.obj.data);
+					$scope.dataset = response.obj.data;
+				})
+			}])
+
+			$(function() {
+				//懒加载,没效果出来			
+				$("img.lazy").lazyload({
+					effect: "fadeIn",
+					threshold: 100,
+					container: $(".outletsbody")
+				});
+
+				//导航点击
+				$(".outletsin a").on("click", function() {
+					$(".outletsin a").removeClass("current");
+					$(this).addClass("current");
+				})
+				
+				
+				
+				
+				$(window).scroll(function() {
+					console.log($(window).scrollTop())
+					if($(window).scrollTop() >= 400) {
+						$("#gotop").fadeIn(500); 
+					} else {
+						$("#gotop").fadeOut(500);
+					}
+				});
+
+				$("#gotop").click(function() {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 500);
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>

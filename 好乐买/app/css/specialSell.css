@@ -1,0 +1,181 @@
+html{
+	/*font-size: 62.5%;*/
+	font-size: 21.9733px;
+}
+h1,h2,h3,p,figure,ul{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	font-family: '微软雅黑';
+	color: #444;
+	font-size: 0.7rem;
+}
+a{
+	text-decoration: none;
+}
+img{
+	display: block;
+	max-width: 100%;
+    vertical-align: top;
+}
+ul{
+	list-style: none;
+}
+.clear{
+	zoom:1;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+div,figure{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*outlets-box*/
+.outlets-box {
+    background-color: #ededed;
+    overflow: hidden;
+    position: relative;
+}
+.outlets-box .outletsfilter {
+    width: 100%;
+    height: 2.15rem;
+    line-height: 2.15rem;
+    margin-bottom: .25rem;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #fff;
+}
+
+.outlets-box .outletsfilter .outletsin {
+    float: left;
+    width: 49.95rem;
+}
+
+.outlets-box .outletsfilter .outletsin a {
+    float: left;
+    padding: 0 .8rem;
+    text-align: center;
+    color: #4b4b4b;
+    font-size: .75rem;
+}
+
+.outlets-box .outletsfilter .outletsin .current {
+    color: #d70057;
+    border-bottom: 1px solid #d70057;
+}
+
+.outlets-box .outletsbody a {
+    display: block;
+    margin-bottom: .25rem;
+    position: relative;
+}
+
+.outlets-box .outletsbody a .outletspic {
+    width: 100%;
+    height: 6.5rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.outlets-box .outletsbody a .outletspic img {
+    height: 6.5rem;
+}
+
+.outlets-box .outletsbody a .outletsinfo {
+    padding: 0 .4rem;
+    height: 1.65rem;
+    line-height: 1.65rem;
+    background-color: #fff;
+}
+
+.outlets-box .outletsbody a .outletsinfo .outlets-discount {
+    float: left;
+    margin-right: .75rem;
+    color: #d70057;
+    font-size: .7rem;
+}
+
+.outlets-box .outletsbody a .outletsinfo .outlets-topic {
+    float: left;
+    color: #333;
+    font-size: .7rem;
+}
+
+.outlets-box .outletsbody a .outletsinfo .outlets-time {
+    float: right;
+    color: #999;
+    font-size: .6rem;
+}
+/*回到顶部*/
+#gotop {
+    background-image: url(../img/scrolltop.png);
+    background-size: 1.85rem;
+    height: 1.85rem;
+    width: 1.85rem;
+    position: fixed;
+    bottom: -2rem;
+    right: .5rem;
+    display: inline-block;
+    z-index: 1000;
+}
+
+
+
+.footer_nav{
+    transform: translateZ(0);
+    z-index: 1333;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+}
+.footer_nav li{
+    width:65px;
+    height:65px;
+}
+.footer_nav li img{
+    width:65px;
+    height:65px;
+}
+.footer_nav li:nth-child(3) img{
+    width:95px;
+    height:95px;
+}
+.footer_nav li:nth-child(1){
+    position:absolute;
+    bottom:0;
+    left:4%;
+    
+}
+.footer_nav li:nth-child(2){
+    position:absolute;
+    bottom:0;
+    left:22%;
+    
+}
+.footer_nav li:nth-child(3){
+    width:95px;
+    height:95px;
+    position:absolute;
+    bottom:0;
+    left:39%;
+}
+.footer_nav li:nth-child(4){
+    position:absolute;
+    bottom:0;
+    left:62%;
+}
+.footer_nav li:nth-child(5){
+    position:absolute;
+    bottom:0;
+    left:82%;
+}

@@ -5,22 +5,12 @@
 	<title>网上买鞋子哪个网站好？上好乐买网上鞋城，正品鞋购物网站-好乐买官网</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<script src="jquery.js"></script>
 	<script src="jquery.cxslide.min.js"></script>
 	<script src="angular.min.js"></script>
-	<script>
-		$(function(){
-			$('#cxslide_fade').cxSlide({
-                events: 'mouseover',
-                type: 'fade',
-                speed: 200,
-                time:2000,
-                
-            });
-            $('.btn li').html("");
-		})
-	</script>
+	<script src="../libs/swiper.min.js"></script>
 </head>
 <body>
 	<div class="appdownload">
@@ -35,48 +25,21 @@
 		<div><img src="images/goindex.png" alt=""></div>
 	</div>
 
-	<div class="example">
-				
-				<div id="cxslide_fade" class="cxslide_fade">
-					<div class="box">
-						<ul class="list">
-							<li><a href="#">
-								<img src="images/lunbotu_1.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_2.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_3.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_4.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_5.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_6.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_7.jpg">
-								
-							</a></li>
-							<li><a href="#">
-								<img src="images/lunbotu_8.jpg">
-								
-							</a></li>
-						</ul>
-					</div>
-					
-				</div>
-	</div>
+	<!-- <div class="example"> -->
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <img class="swiper-slide" src="images/lunbotu_1.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_2.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_3.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_4.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_5.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_6.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_7.jpg">
+		        <img class="swiper-slide" src="images/lunbotu_8.jpg">
+		    </div>
+		    <div class="swiper-pagination"></div>
+        </div>
+	<!-- </div> -->
 
     <div class="nav">
     	<div><img src="images/1.gif" alt=""></div>
@@ -93,7 +56,7 @@
 	</div>
 
 
-	<div class="daohang"> 
+	<div class="daohang">
 		<a href="#">全部</a>
 		<a href="#">服饰</a>
 		<a href="#">鞋类</a>
@@ -135,7 +98,7 @@
             </a>
         </li> 
         <li>
-            <a href="/outletswall">
+            <a href="http://localhost:88/app/html/specialSell.html">
             <span>                 
                 <img src="images/hui_3.png" alt="">                      
             </span>  
@@ -166,7 +129,19 @@
 		<p>©2007-2017 OkBuy.com 津ICP备16005872号-1</p>
 	</div>
 </footer>
-
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 2000,
+        speed: 2000,
+        loop: true,
+        pagination: '.swiper-pagination',
+        autoplayDisableOnInteraction: false,
+        onTap: function(swiper, event) {
+            //轮播图链接跳转
+            self.location = event.path[0].getAttribute('url')
+        }
+    })
+	</script>
 </body>
 </html>
 <script>

@@ -1,0 +1,196 @@
+html{
+  /*font-size: 62.5%;*/
+  font-size: 21.9733px;
+}
+h1,h2,h3,p,figure,ul{
+  margin: 0;
+  padding: 0;
+}
+body{
+    line-height: 1.4;
+    font-size: .7rem;
+    color: #444;
+    -webkit-text-size-adjust: 100%;
+    font-family: '黑体';
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+}
+a{
+  text-decoration: none;
+}
+img{
+  display: block;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+input{
+	border: none;
+	outline:none;
+}
+
+ul{
+  list-style: none;
+}
+.clear{
+  zoom:1;
+}
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+div,figure{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+/*header*/
+.header{
+    background: #f5f5f5;
+    width: 100%;
+    position: relative;
+}
+.headerback{
+  float: left;
+  display: block;
+  line-height: 2.5rem;
+  width: 11%;
+ 	
+}
+/*.headerback img{
+  width: 2rem;
+}*/
+.headerback img{
+  width: 100%;
+  height: 100%;
+}
+
+/*.index img{
+  width: 2.3rem;
+}*/
+.index img{
+  width: 100%;
+  height: 100%;
+  
+}
+
+.index{
+  float: right;
+  line-height: 2.5rem;
+  display: block;
+  width: 12%;
+}
+
+.header .headername {
+    display: block;
+    float: left;
+    /*width: 12.7rem;*/
+   	width: 77%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: .8rem;
+}
+
+/*contentbox*/
+.contentbox{
+	min-height: 732px;
+	padding-top: .5rem;
+  overflow: hidden;
+  background: #eee;
+}
+.loginfillbox {
+    background-color: #fff;
+}
+.loginfillbox .login-input-wrap {
+    height: 2.25rem;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.loginfillbox .login-input-wrap .register-namelabel {
+    float: left;
+    width: 3.75rem;
+    padding: 0 .1rem 0 .5rem;
+    line-height: 2.25rem;
+}
+
+.loginfillbox .login-input-wrap #mobiletel {
+    width: 8.8rem;
+}
+
+.loginfillbox .login-input-wrap .register-input, .loginfillbox .login-input-wrap .realname-input {
+    height: 1.95rem;
+    line-height: normal;
+    padding: .15rem 0;
+    color: #333;
+    font-size: .7rem;
+}
+
+.loginfillbox .login-input-wrap .getcode {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5.1rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center;
+    z-index: 3;
+    border-left: 1px solid #e5e5e5;
+    color: #d70057;
+    font-size: .7rem;
+}
+
+.loginnowbox {
+    padding: 0 .5rem;
+}
+
+.loginnowbox .msgreply {
+    display: block;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+    color: #ef3d2d;
+    font-size: .6rem;
+}
+
+.purplebtn {
+    width: 100%;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    border-radius: .2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #d70057;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.loginnowbox .userremind {
+    display: block;
+    margin-top: .75rem;
+    color: #666;
+    font-size: .6rem;
+}
+
+.loginnowbox .userremind a {
+    color: #d70057;
+}
+
+.loginnowbox .hreflogin {
+    margin-top: .5rem;
+    text-align: right;
+}
+
+.loginnowbox .hreflogin a {
+    display: inline-block;
+    line-height: 1rem;
+    color: #316ac0;
+    font-size: .7rem;
+}
+
+

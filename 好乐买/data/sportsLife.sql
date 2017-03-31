@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
+Source Server         : localhost_3307
 Source Server Version : 50520
 Source Host           : localhost:3306
 Source Database       : okbuy
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50520
 File Encoding         : 65001
 
-Date: 2017-03-29 21:04:10
+Date: 2017-03-31 08:47:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `sportslife` (
   `img` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`index_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10127 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10152 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sportslife
@@ -154,7 +154,6 @@ INSERT INTO `sportslife` VALUES ('10131', 'sportsLife', 'sportshoe', '../images/
 INSERT INTO `sportslife` VALUES ('10132', 'sportsLife', 'sportshoe', '../images/shoe19.jpg', '运动靴');
 INSERT INTO `sportslife` VALUES ('10133', 'sportsLife', 'sportshoe', '../images/shoe20.jpg', '兵乓球鞋');
 INSERT INTO `sportslife` VALUES ('10134', 'sportsLife', 'sportshoe', '../images/shoe21.jpg', '室内鞋');
-
 INSERT INTO `sportslife` VALUES ('10135', 'sportsLife', 'cloth', '../images/sCloth10.jpg', '棉服');
 INSERT INTO `sportslife` VALUES ('10136', 'sportsLife', 'cloth', '../images/sCloth11.jpg', '保暖马甲');
 INSERT INTO `sportslife` VALUES ('10137', 'sportsLife', 'cloth', '../images/sCloth12.jpg', '运动套装');
@@ -162,7 +161,6 @@ INSERT INTO `sportslife` VALUES ('10138', 'sportsLife', 'cloth', '../images/sClo
 INSERT INTO `sportslife` VALUES ('10139', 'sportsLife', 'cloth', '../images/sCloth14.jpg', '衬衫');
 INSERT INTO `sportslife` VALUES ('10140', 'sportsLife', 'cloth', '../images/sCloth15.jpg', '运动裙');
 INSERT INTO `sportslife` VALUES ('10141', 'sportsLife', 'cloth', '../images/sCloth16.jpg', '毛衣/线衫');
-
 INSERT INTO `sportslife` VALUES ('10142', 'sportsLife', 'baopei', '../images/baopei1.jpg', '运动背包');
 INSERT INTO `sportslife` VALUES ('10143', 'sportsLife', 'baopei', '../images/baopei2.jpg', '棒球帽');
 INSERT INTO `sportslife` VALUES ('10144', 'sportsLife', 'baopei', '../images/baopei3.jpg', '袜子');

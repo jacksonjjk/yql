@@ -7,6 +7,8 @@ var app = express();
 //调用mysql模块
 var mysql = require('mysql');
 //连接mysql所需的用户名和密码
+var message = require('./model/message.model.js');
+
 var server = mysql.createConnection({
   user:'root',
   password:''
@@ -29,6 +31,8 @@ server.connect(function(error,results){
   })
 //操作mysql数据库
     server.query("use `okbuy`");
+
+
 app.post('/register/register', urlencodedParser,function(request, response) {
     console.log(request.body)
     var name = request.body.name;
@@ -59,6 +63,8 @@ app.post('/register/register', urlencodedParser,function(request, response) {
       }
     });
 });
+
+
 app.post('/login/login2',urlencodedParser,function(request,response){
   console.log(request.body);
     var name = request.body.name;
@@ -117,13 +123,46 @@ app.get('/page/classification', urlencodedParser, function(request, response){
   })
 });
   
-   
-  
+//dc   
+ app.get('/query', function(request, response){
+
+    server.query('select * from okbuy_goods',function(err,result,fields){
+    if(err){
+      console.log(err);
+    }else{
+      var _obj = new message(true, null ,result);
+      response.send(_obj);
+    }
+  })
+});
+  app.get('/banner', function(request, response){
+
+    server.query('select * from okbuy_banner',function(err,result,fields){
+    if(err){
+      console.log(err);
+    }else{
+      var _obj = new message(true, null ,result);
+      response.send(_obj);
+    }
+
+});
+
+  });
+
+
+
+
+
 
        
 
 
 
 app.use(express.static(path.join(__dirname + '/')));
+// app.use(express.static(path.join(__dirname+ '/app')));
+
+
+
+
 
 app.listen(88);

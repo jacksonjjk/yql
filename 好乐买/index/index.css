@@ -21,10 +21,13 @@
 	position:relative;
 }
 .search input{
+	position:absolute;
+    top:0;
+    left:10%;
 	outline:none;
 	border:none;
 	border: 1px solid #ccc;
-	width:100%;
+	width:80%;
 	height:40%;
 	padding:6px 35px 3px 10px;
 	border-radius: 20px;
@@ -248,7 +251,7 @@
 }
 .list ul li p{
 	height: 3rem;
-    line-height: 3rem;
+    line-height: 3rem;0.5rem
     margin: 0 .35rem .45rem;
     font-size: 1.2rem;
     color: #2c2c2c;

@@ -29,11 +29,7 @@ function init(){
 	//右测滚动，iscroll插件
 	setTimeout(function(){
 		var myScroll = new IScroll('#wrapper',{
-			//隐藏滚动条
 			hScrollbar:false,
-
-			//修复a便签失效bug
-			preventDefault:false,
 		});
 	},300)
 
@@ -41,6 +37,7 @@ function init(){
 	function cUpdate(){
 		var htmlFontSize = document.getElementsByTagName('html')[0];
 		htmlFontSize.style.fontSize = window.innerWidth/18.75 + "px";
+		
 		for(var i=0 ; i<myContainer.slides.length ; i++){
 			myContainer.slides[i].style.height = "3rem";
 		}
