@@ -149,6 +149,19 @@ app.get('/page/classification', urlencodedParser, function(request, response){
 
   });
 
+// jh
+app.get('/index', urlencodedParser, function(request, response){
+
+//操作mysql数据库
+  server.query("select * from `goods`",function(err,rs,fields){
+    if(err){
+      console.log(err);
+    }else{
+      response.send(rs);
+      // console.log(rs);
+    }
+  })
+}); 
 
 
 

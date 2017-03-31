@@ -53,7 +53,7 @@ define(['jquery', 'template'], function($, template) {
 											</div>\
 											<div class="acright-icon"><img src="../img/dc_ico1.png"></div>\
 										</div>\
-										<a class="itemthumb" href="#">\
+										<a class="itemthumb" href="http://localhost:88/connect/html/details.html">\
 											<img class="lazy-loaded" alt="' + uname + '" data-src="" src="../img/' + uimg + '">\
 										</a>\
 										<div class="iteminfo">\
