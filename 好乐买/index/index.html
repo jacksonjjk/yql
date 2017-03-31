@@ -12,15 +12,13 @@
 	<script src="angular.min.js"></script>
 	<script src="../libs/swiper.min.js"></script>
     <script>
-        onload = function(){
-            cUpdate()
-            function cUpdate(){
-                var htmlFontSize = document.getElementsByTagName('html')[0];
-                htmlFontSize.style.fontSize = window.innerWidth/23.4375 + "px";
-            }
-            //宽度改变时样式错乱bug修复
-            window.addEventListener('resize',cUpdate);
+        cUpdate()
+        function cUpdate(){
+            var htmlFontSize = document.getElementsByTagName('html')[0];
+            htmlFontSize.style.fontSize = window.innerWidth/23.4375 + "px";
         }
+        //宽度改变时样式错乱bug修复
+        window.addEventListener('resize',cUpdate);
     </script>
 </head>
 <body>
@@ -30,28 +28,24 @@
 		</a>
 	</div>
 
-	<div class="search">
+	<div class="search clearfix">
 		<div><img src="images/logo.png" alt="" style="width:5.0rem;height:3.125rem"></div>
 		<div><input type="text" style="width:11.0rem;height:1.3rem"></div>
 		<div><img src="images/goindex.png" alt=""  style="width:3.125rem;height:3.125rem"></div>
 	</div>
-
-	<!-- <div class="example"> -->
-		<div class="swiper-container">
-		    <div class="swiper-wrapper">
-		        <img class="swiper-slide" src="images/lunbotu_1.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_2.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_3.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_4.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_5.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_6.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_7.jpg">
-		        <img class="swiper-slide" src="images/lunbotu_8.jpg">
-		    </div>
-		    <div class="swiper-pagination"></div>
-        </div>
-	<!-- </div> -->
-
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <img class="swiper-slide" src="images/lunbotu_1.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_2.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_3.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_4.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_5.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_6.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_7.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_8.jpg">
+	    </div>
+	    <div class="swiper-pagination"></div>
+    </div>
     <div class="nav">
     	<div><img src="images/1.gif" alt=""></div>
     	<div><img src="images/2.png" alt=""></div>
@@ -151,7 +145,7 @@
             //轮播图链接跳转
             self.location = event.path[0].getAttribute('url')
         }
-    })
+        })
 	</script>
 </body>
 </html>
