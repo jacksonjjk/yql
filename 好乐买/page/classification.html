@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 20px">
+<html lang="en">
 <!-- 18.75 * fontsize = 屏幕宽度 -->
 
 <head>
@@ -14,6 +14,10 @@
     <script src="../libs/swiper.min.js"></script>
     <script src="../libs/iscroll.js"></script>
     <script src="../js/classification.js"></script>
+    <script>
+        var htmlFontSize = document.getElementsByTagName('html')[0];
+        htmlFontSize.style.fontSize = window.innerWidth/18.75 + "px";
+    </script>
 </head>
 
 <body ng-app="myApp" ng-controller="myController">

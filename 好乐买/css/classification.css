@@ -1,6 +1,6 @@
 html,body{
 	height: 100%;
-	font-size: "黑体";
+	font-family: '黑体',Arial,SimSun,Helvetica,sans-serif;
 	font-size: .7rem;
 	line-height: 1.4;
 }
@@ -31,7 +31,7 @@ header{
 }
 .classification{
 	width: 100%;
-	height: calc(100% - 2.5rem - 3.0rem) ;
+	height: calc(100% - 2.5rem - 2.0rem) ;
 	overflow: hidden;
 }
 
@@ -64,7 +64,7 @@ header{
 #wrapper {
 	position: absolute;
 	top: 2.5rem;
-	bottom: 3.0rem;
+	bottom: 2.0rem;
 	left: 5.0rem;
 	width: 13.5rem;
 	font-size: 0.6rem;
@@ -91,7 +91,6 @@ header{
     margin-top: 1rem;
 }
 .swiper-hot{
-	overflow: hidden;
 	margin-left: 0.4rem;
 }
 .cHot{

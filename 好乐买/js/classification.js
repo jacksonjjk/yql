@@ -39,15 +39,17 @@ function init(){
 
 	cUpdate()
 	function cUpdate(){
-		var htmlFontSize = document.getElementsByTagName('html')[0];
-		htmlFontSize.style.fontSize = window.innerWidth/18.75 + "px";
-		
+		htmlFontSize();
 		for(var i=0 ; i<myContainer.slides.length ; i++){
 			myContainer.slides[i].style.height = "3rem";
 		}
 		for(var i=0 ; i<myHot.slides.length ; i++){
 			myHot.slides[i].style.width = "3rem";
 		}
+	}
+	function htmlFontSize(){
+		var htmlFontSize = document.getElementsByTagName('html')[0];
+		htmlFontSize.style.fontSize = window.innerWidth/18.75 + "px";
 	}
 	//宽度改变时样式错乱bug修复
 	window.addEventListener('resize',cUpdate);
