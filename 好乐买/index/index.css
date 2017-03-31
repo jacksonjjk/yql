@@ -262,7 +262,7 @@ footer p span {
 .footer_nav li{
 	width:2.75rem;
 	height:2.75rem;
-	bottom:0.3125rem;
+	bottom:0.35rem;
 }
 .footer_nav li img{
 	width:2.75rem;
@@ -285,6 +285,7 @@ footer p span {
 	height:4.125rem;
 	position:absolute;
 	left:39%;
+  bottom:0.25rem;
 }
 .footer_nav li:nth-child(4){
 	position:absolute;
