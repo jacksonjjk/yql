@@ -90,9 +90,6 @@ header{
     padding-left: .5rem;
     margin-top: 1rem;
 }
-.swiper-hot{
-	margin-left: 0.4rem;
-}
 .cHot{
 	width: 720px;
 	transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
