@@ -59,7 +59,7 @@ div,figure{
   display: block;
   line-height: 2.5rem;
   width: 11%;
- 	
+
 }
 /*.headerback img{
   width: 2rem;
@@ -75,7 +75,7 @@ div,figure{
 .index img{
   width: 100%;
   height: 100%;
-  
+
 }
 
 .index{
@@ -193,4 +193,18 @@ div,figure{
     font-size: .7rem;
 }
 
-
+@media screen and (min-width: 414px) and (max-width: 768px) {
+  html{font-size: 40px;}
+  .contentbox {min-height: 1024px;}
+}
+@media screen and (min-width: 375px) and (max-width: 414px) {
+  html{font-size: 22px;}
+  .contentbox {min-height: 736px;}
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  html{font-size: 20px;}
+  .contentbox {min-height: 568px;}
+}
+@media screen and (max-width: 320px){
+  html{font-size: 17px;}
+}
