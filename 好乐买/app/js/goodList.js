@@ -1,6 +1,6 @@
 //定义主页模块
 //定义模块的方法
-define(['jquery', 'template'], function($, template) {
+define(['jquery', 'template','common'], function($, template,common) {
 
 	return {
 		init: function() {
@@ -19,7 +19,7 @@ define(['jquery', 'template'], function($, template) {
 		ajax: function(callback) {
 			$.ajax({
 				type: "get",
-				url: "http://localhost:88/query",
+				url: baseurl+"/query",
 				//dataType: "binary",
 				success: function(res) {
 					console.log(res)

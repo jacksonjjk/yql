@@ -100,7 +100,7 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 
 myApp.controller("myController",["$scope","$http",function($scope,$http){
 	$http({
-    url:'http://localhost:88/page/classification',
+    url: baseurl+'/page/classification',
     method:'get'
   	}).then(function(response){
   		$scope.response = response.data;
