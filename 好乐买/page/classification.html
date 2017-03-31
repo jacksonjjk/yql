@@ -13,13 +13,21 @@
     <script src="../libs/swiper.min.js"></script>
     <script src="../libs/iscroll.js"></script>
     <script src="../js/classification.js"></script>
+    <style>
+        #cSidebar{
+            position: relative;
+            width: 3.95rem;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body ng-app="myApp" ng-controller="myController">
     <header>
     </header>
     <div class="classification clear">
-        <div id="cSidebar" class="swiper-container">
+        <!-- <div id="cSidebar" class="swiper-container">
             <div class="cSidebar swiper-wrapper">
                 <a href="#classification1" id="cActive" class="cHots swiper-slide">运动生活</a>
                 <a href="#classification2" class="cHots swiper-slide">户外鞋服</a>
@@ -30,6 +38,19 @@
                 <a href="#classification7" class="cHots swiper-slide">全 球 购</a>
                 <a href="#classification8" class="cHots swiper-slide">家居服饰</a>
                 <a href="#classification9" class="cHots swiper-slide">品牌馆</a>
+            </div>
+        </div> -->
+        <div id="cSidebar">
+            <div class="cSidebar" style="position: absolute;height: 30.0rem;">
+                <a href="#classification1" id="cActive" class="cHots">运动生活</a>
+                <a href="#classification2" class="cHots">户外鞋服</a>
+                <a href="#classification3" class="cHots">休闲服装</a>
+                <a href="#classification4" class="cHots">精品男鞋</a>
+                <a href="#classification5" class="cHots">时尚女鞋</a>
+                <a href="#classification6" class="cHots">快乐儿童</a>
+                <a href="#classification7" class="cHots">全 球 购</a>
+                <a href="#classification8" class="cHots">家居服饰</a>
+                <a href="#classification9" class="cHots">品牌馆</a>
             </div>
         </div>
         <div data-ui-view="">

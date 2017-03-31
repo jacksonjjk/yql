@@ -3,18 +3,6 @@ window.onload = function(){
 	setTimeout(init,100)
 }
 function init(){
-	var myContainer = new Swiper('.swiper-container',{
-	    freeMode : true,
-	    freeModeMomentumRatio : 1,
-	    direction : 'vertical',
-	    slidesPerView : 8,
-	    slidesOffsetAfter : 200,
-	    onTap: function(swiper, event){
-	    	document.getElementById('cActive').id = "";
-	    	event.target.id = "cActive";
-	    }
-	})
-	
 	var myHot = new Swiper('.swiper-hot',{
 	    freeMode : true,
         slidesPerView : 4,
@@ -35,14 +23,14 @@ function init(){
 			//修复a便签失效bug
 			preventDefault:false,
 		});
+		var cScroll = new IScroll('#cSidebar',{
+			preventDefault:false,
+		})
 	},300)
 
 	cUpdate()
 	function cUpdate(){
 		htmlFontSize();
-		for(var i=0 ; i<myContainer.slides.length ; i++){
-			myContainer.slides[i].style.height = "3rem";
-		}
 		for(var i=0 ; i<myHot.slides.length ; i++){
 			myHot.slides[i].style.width = "3rem";
 		}
