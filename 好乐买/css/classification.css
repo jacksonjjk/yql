@@ -138,48 +138,42 @@ header{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3rem;
+    height: 2.55rem;
     background: #fff;
     border-top: 1px solid #e5e5e5;
 }
 .footer_nav li{
-	width:65px;
-	height:65px;
+	width:2.75rem;
+	height:2.75rem;
+	bottom:-0.25rem;
 }
 .footer_nav li img{
-	width:65px;
-	height:65px;
+	width:2.2rem;
+	height:2.2rem;
 }
 .footer_nav li:nth-child(3) img{
-	width:95px;
-	height:95px;
+	width:3.3rem;
+	height:3.3rem;
 }
 .footer_nav li:nth-child(1){
 	position:absolute;
-	bottom:0;
 	left:4%;
-	
 }
 .footer_nav li:nth-child(2){
 	position:absolute;
-	bottom:0;
 	left:22%;
-	
 }
 .footer_nav li:nth-child(3){
-	width:95px;
-	height:95px;
+	width:3.75rem;
+	height:3.75rem;
 	position:absolute;
-	bottom:0;
 	left:39%;
 }
 .footer_nav li:nth-child(4){
 	position:absolute;
-	bottom:0;
 	left:62%;
 }
 .footer_nav li:nth-child(5){
 	position:absolute;
-	bottom:0;
 	left:82%;
 }
