@@ -21,9 +21,9 @@
         window.addEventListener('resize',cUpdate);
     </script>
 </head>
-<body>
+<body ng-app="dkApp" ng-controller="dkController">
 	<div class="appdownload">
-		<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.okbuy.activity">
+		<a href="#">
 		    <img src="images/appdownload.png" alt="">
 		</a>
 	</div>
@@ -72,10 +72,10 @@
     </div>
 
 
-    <div class="list" ng-app="dkApp" ng-controller="dkController">
+    <div class="list" >
     	<ul ng-repeat="n in shuju">
     		<li>
-                <a href="http://localhost:88/app/index/goodList.html">
+                <a href={{baseurl}}/app/index/goodList.html>
     			<img ng-src="{{n.img}}" alt="">
                 </a>
     			<p>
@@ -88,8 +88,6 @@
 
 
 
-
-
     <ul class="footer_nav">
 		<li>
             <a href="#">
@@ -99,28 +97,28 @@
             </a>
         </li> 
         <li>
-            <a href="http://localhost:88/page/classification.html">
+            <a href={{baseurl}}/page/classification.html>
             <span>             
             <img src="images/hui_2.png" alt="">                   
             </span>  
             </a>
         </li> 
         <li>
-            <a href="http://localhost:88/app/html/specialSell.html">
+            <a href={{baseurl}}/app/html/specialSell.html>
             <span>                 
                 <img src="images/hui_3.png" alt="">                      
             </span>  
             </a>
         </li> 
         <li>
-            <a href="http://localhost:88/connect/html/goods.html">
+            <a href={{baseurl}}/connect/html/goods.html>
             <span>            
              <img src="images/hui_4.png" alt="">                   
             </span>  
             </a>
         </li> 
         <li>
-            <a href="http://localhost:88/login/login2.html">
+            <a href={{baseurl}}/login/login2.html>
             <span>            
                  <img src="images/hui_5.png" alt="">                 
             </span>  
@@ -133,7 +131,7 @@
 
 <footer>
 	<div class="otFooter_2">
-		<p><a href="http://www.okbuy.com">电脑版</a><span>触屏版</span><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.okbuy.activity">客户端</a></p>
+		<p><a href="#">电脑版</a><span>触屏版</span><a href="#">客户端</a></p>
 		<p>©2007-2017 OkBuy.com 津ICP备16005872号-1</p>
 	</div>
 </footer>
@@ -155,10 +153,10 @@
 <script>
 	var dkApp = angular.module('dkApp', []);
 	var dkController = dkApp.controller('dkController', ['$scope', '$http', function ($scope, $http) {
-        $http.get('http://localhost:88/index/index').success(function (response) {
+        $http.get(baseurl+'/index/index').success(function (response) {
                 $scope.shuju= response;
-                
-             
+                console.log(baseurl)
+                $scope.baseurl = baseurl;
             });
 
 	}])
