@@ -105,5 +105,6 @@ myApp.controller("myController",["$scope","$http",function($scope,$http){
   	}).then(function(response){
   		$scope.response = response.data;
   		$scope.pagename = window.document.location.hash;
+  		$scope.baseurl = baseurl;
 	})
 }])

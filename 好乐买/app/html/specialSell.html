@@ -5,6 +5,7 @@
 		<title>好乐买</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../css/specialSell.css" />
+		<script src="../../js/common.js"></script>
 		<script src="../js/jquery.js"></script>
 		<script src="../lib/angular.min.js"></script>
 		<script src="../js/lazyload/jquery.lazyload.min.js"></script>
@@ -19,7 +20,7 @@
 		</script>
 	</head>
 
-	<body>
+	<body ng-app="dcApp" ng-controller="dcController">
 		<div class="outlets-box">
 			<div class="outletsfilter" id="outletshd" style="width: 18.750028rem;">
 				<div class="outletsin" style="width: 19.250636rem; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
@@ -32,8 +33,8 @@
 				</div>
 			</div>
 
-			<div class="outletsbody" ng-app="dcApp" ng-controller="dcController">
-				<a href="http://localhost:88/app/index/goodList.html" ng-repeat="value in dataset">
+			<div class="outletsbody" >
+				<a href={{baseurl}}/app/index/goodList.html ng-repeat="value in dataset">
 					<div class="outletspic"><img class="lazy" ng-src="../img/{{value.uimg}}" alt=""></div>
 					<p class="outletsinfo"><span class="outlets-discount">{{value.price}}</span><span class="outlets-topic">{{value.content}}</span><span class="outlets-time">{{value.date}}</span></p>
 				</a>
@@ -46,14 +47,14 @@
 
 		<ul class="footer_nav">
 		<li>
-            <a href="http://localhost:88/index/index.html">
+            <a href={{baseurl}}/index/index.html>
             <span>
                 <img src="images/hui_1.png" alt="">
             </span>
             </a>
         </li>
         <li>
-            <a href="http://localhost:88/page/classification.html">
+            <a href={{baseurl}}/page/classification.html>
             <span>
             <img src="images/hui_2.png" alt="">
             </span>
@@ -67,14 +68,14 @@
             </a>
         </li>
         <li>
-            <a href="http://localhost:88/connect/html/goods.html">
+            <a href={{baseurl}}/connect/html/goods.html>
             <span>
              <img src="images/hui_4.png" alt="">
             </span>
             </a>
         </li>
         <li>
-            <a href="http://localhost:88/login/login2.html">
+            <a href={{baseurl}}/login/login2.html>
             <span>
                  <img src="images/hui_5.png" alt="">
             </span>
@@ -85,7 +86,8 @@
 		<script type="text/javascript">
 			var dcApp = angular.module('dcApp', []);
 			var dcController = dcApp.controller('dcController', ['$scope', '$http', function($scope, $http) {
-				$http.get('http://localhost:88/banner').success(function(response) {
+				$http.get(baseurl+'/banner').success(function(response) {
+					$scope.baseurl = baseurl;
 					console.log(response);
 					console.log(response.obj.data);
 					$scope.dataset = response.obj.data;
