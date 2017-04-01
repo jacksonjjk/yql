@@ -20,6 +20,11 @@
         }
         window.addEventListener('resize',cUpdate);
     </script>
+    <style>
+        .swiper-wrapper img{
+            height: 8.125rem;
+        }
+    </style>
 </head>
 <body ng-app="dkApp" ng-controller="dkController">
 	<div class="appdownload">
@@ -36,14 +41,14 @@
 	</div>
 	<div class="swiper-container">
 	    <div class="swiper-wrapper">
-	        <img class="swiper-slide" src="images/lunbotu_1.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_2.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_3.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_4.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_5.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_6.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_7.jpg">
-	        <img class="swiper-slide" src="images/lunbotu_8.jpg">
+	        <img class="swiper-slide" src="images/lunbotu_1.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_2.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_3.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_4.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_5.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_6.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_7.jpg" alt="加载不出来">
+	        <img class="swiper-slide" src="images/lunbotu_8.jpg" alt="加载不出来">
 	    </div>
 	    <div class="swiper-pagination"></div>
     </div>
@@ -136,17 +141,20 @@
 	</div>
 </footer>
 	<script>
-		var mySwiper = new Swiper('.swiper-container', {
-        autoplay: 2000,
-        speed: 2000,
-        loop: true,
-        pagination: '.swiper-pagination',
-        autoplayDisableOnInteraction: false,
-        onTap: function(swiper, event) {
-            //轮播图链接跳转
-            self.location = event.path[0].getAttribute('url')
-        }
-        })
+        setTimeout(function(){
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: 2000,
+                speed: 2000,
+                loop: true,
+                pagination: '.swiper-pagination',
+                autoplayDisableOnInteraction: false,
+                onTap: function(swiper, event) {
+                    //轮播图链接跳转
+                    self.location = event.path[0].getAttribute('url')
+                }
+            })
+        },200)
+		
 	</script>
 </body>
 </html>
