@@ -22,8 +22,8 @@ define(['jquery', 'template','common'], function($, template,common) {
 				url: baseurl+"/query",
 				//dataType: "binary",
 				success: function(res) {
-					console.log(res)
-
+					// console.log(res)
+					console.log(baseurl)
 					var ojson = res.obj.data;
 					var str = '';
 					for(var i = 0; i < ojson.length; i++) {
@@ -36,7 +36,7 @@ define(['jquery', 'template','common'], function($, template,common) {
 
 
 						var imgArrStr = ojson[i].imgSlider?JSON.parse(ojson[i].imgSlider):'';
-						console.log(imgArrStr)
+						// console.log(imgArrStr)
 
 
 						//  var imgObj = JSON.parse(imgArrStr);
@@ -53,7 +53,7 @@ define(['jquery', 'template','common'], function($, template,common) {
 											</div>\
 											<div class="acright-icon"><img src="../img/dc_ico1.png"></div>\
 										</div>\
-										<a class="itemthumb" href="http://localhost:88/connect/html/details.html">\
+										<a class="itemthumb" href="'+baseurl+'/connect/html/details.html">\
 											<img class="lazy-loaded" alt="' + uname + '" data-src="" src="../img/' + uimg + '">\
 										</a>\
 										<div class="iteminfo">\

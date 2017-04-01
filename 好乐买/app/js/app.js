@@ -16,7 +16,7 @@ requirejs.config({
     paths:{
         'jquery':"lib/jquery",
         'template':'lib/template-debug',
-        'common':'../../js/common',
+        'common':'../js/common',
         'good':'js/good',
         'goodList':'js/goodList'
 

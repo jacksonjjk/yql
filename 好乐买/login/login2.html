@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 	<title>登录-好乐买触屏版</title>
 	<link rel="stylesheet" href="login2.css">
+    <script src="../js/common.js"></script>
     <script src="../libs/jquery-2.1.1.min.js"></script>
     <script src="../libs/angular.min.js"></script>
     <script src="common.js"></script>
@@ -12,8 +13,8 @@
 <body ng-app="myapp" ng-controller="mycontroller">
 	<header>
 	  <span class="headername">登录</span>
-	  <a href="http://localhost:88/index/index.html" class="headerback"><img src="../img/back.png" alt=""></a>
-	  <a href="http://localhost:88/index/index.html" class="index"><img src="../img/goindex.png" alt=""></a>
+	  <a href={{baseurl}}/index/index.html class="headerback"><img src="../img/back.png" alt=""></a>
+	  <a href={{baseurl}}/index/index.html class="index"><img src="../img/goindex.png" alt=""></a>
 	  <div class="OB_clearB"></div>
 	</header>
 
@@ -56,7 +57,7 @@
     <!-- 快速 -->
     <div class="otherabout">
         <div class="fastlogin">
-            <a href="http://localhost:88/register/register.html"><span>快速注册</span></a>
+            <a href={{baseurl}}/register/register.html><span>快速注册</span></a>
         </div>
         <div class="forgetpassword">
             <span>忘记密码？</span>
@@ -114,17 +115,17 @@
 
     var myApp = angular.module('myapp',['commonApp']);
     myApp.controller('mycontroller',['$scope','$http',function($scope,$http){
-
+        $scope.baseurl = baseurl;
 
         $scope.Btn =function(){
-
+            console.log(baseurl)
 
             console.log($scope.name)
             console.log($scope.psw)
 
             
             $http({
-                url:'http://localhost:88/'+'login/login2',
+                url:baseurl+'/login/login2',
                 data:{name:$scope.name,password:$scope.psw},
                 method:'post'
               }).success(function(data){
@@ -133,7 +134,7 @@
                 alert(data);
               }else{
                 alert("登录成功");
-                location.href = "http://localhost:88/index/index.html";
+                location.href = baseurl = "/index/index.html";
               }
                
              })

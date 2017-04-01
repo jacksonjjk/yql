@@ -6,15 +6,17 @@
   <title>商品详情</title>
   <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../css/details.css">
+  <script src="../../js/common.js"></script>
+  <script src="../lib/angular.min.js"></script>
   <script src="../lib/swiper.min.js"></script>
   <script src="../lib/jquery-1.12.3.js"></script>
   <script src="../lib/require.js"  data-main="../js/app.js"></script>
 </head>
-<body>
+<body ng-app="myBody" ng-controller="myController">
   <header>
-   <a href="http://localhost:88/app/index/goodList.html" class="headerback"><img src="../img/back.png"></a>
+   <a href={{baseurl}}/app/index/goodList.html class="headerback"><img src="../img/back.png"></a>
    <span class="headername">商品详情</span>
-   <a href="http://localhost:88/index/index.html" class="goindex">
+   <a href={{baseurl}}/index/index.html class="goindex">
      <img src="../img/goindex.png">
    </a>
  </header>
@@ -154,7 +156,7 @@
   <img class="like" src="../img/like8.jpg" alt="">
 </div>
 <div class="footer">
-  <a href="http://localhost:88/connect/html/goods.html" class="all goods">
+  <a href={{baseurl}}/connect/html/goods.html class="all goods">
     <span class="good"><i></i></span>
     <span class="good">购物车</span>
   </a>
@@ -182,7 +184,11 @@
           $(this).remove()
         });
      })
-
+    var myBody = new angular.module('myBody',[]);
+    var myController = myBody.controller('myController',['$scope',function($scope){
+        $scope.baseurl = baseurl
+        console.log($scope.baseurl)
+    }]) 
 </script>
 </body>
 </html>

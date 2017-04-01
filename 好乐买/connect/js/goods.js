@@ -1,13 +1,14 @@
-define(["jquery","template"],function($,template){
+define(["jquery","template","common"],function($,template,common){
   function Goods(){
     $("body").append(this.goods());
     this.ajax()
+    console.log(baseurl)
   }
   Goods.prototype={
     "goods":template.compile('<header>\
-     <a href="http://localhost:88/app/index/goodList.html" class="headerback"><img src="../img/back.png"></a>\
+     <a href="'+baseurl+'/app/index/goodList.html" class="headerback"><img src="../img/back.png"></a>\
      <span class="headername">我的购物车</span>\
-     <a href="http://localhost:88/index/index.html" class="goindex">\
+     <a href="'+baseurl+'/index/index.html" class="goindex">\
      <img src="../img/goindex.png">\
      </a>\
   </header>\
@@ -28,7 +29,7 @@ define(["jquery","template"],function($,template){
   Goods.prototype.ajax=function(_callback){
     $.ajax({
       type:"get",
-      url:"http://localhost:88/index",
+      url:baseurl+"/index",
       success:function(res){
         console.log(res)
         var cart="";
@@ -48,7 +49,7 @@ define(["jquery","template"],function($,template){
 		          <a href="/" class="ui_link"><img src="../img/cart1.jpg"></a>\
 		        </div>\
 		        <div class="itemName">\
-		            <a href="http://localhost:88/connect/html/details.html?id='+res[i].uid+'" class="ui_link_1">'+res[i].title+'</a>\
+		            <a href="'+baseurl+'/connect/html/details.html?id='+res[i].uid+'" class="ui_link_1">'+res[i].title+'</a>\
 		            <p  class="size">尺码:<i>'+res[i].size+'</i><span>￥'+res[i].price+'</span></p>\
 		            <div class="num">\
 		              <div class="nummin">\
@@ -113,7 +114,7 @@ define(["jquery","template"],function($,template){
 
 					})
 					function update(){
-						$.get("http://localhost:88/update",function(res){
+						$.get(baseurl+"/update",function(res){
 							console.log(res)
 						})
 					}
