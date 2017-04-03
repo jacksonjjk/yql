@@ -5,7 +5,7 @@
                 <p>热门品牌</p>
                 <div class="swiper-hot" style="width:12rem;height:3rem">
                     <div class="cHot swiper-wrapper clear">
-                        <a href="../qrcode_for_gh_59dd14d4279d_430.jpg" class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'hots'}">
+                        <a href={{url}} class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'hots'}">
                             <img ng-src={{i.img}} alt="{{i.name}}">
                             <br>{{i.name}}
                         </a>
@@ -15,7 +15,7 @@
             <li>
                 <p>户外服饰</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'sportshoe'}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'sportshoe'}">
                         <img ng-src={{i.img}} alt="{{i.name}}">
                         <br>{{i.name}}
                     </a>
@@ -24,7 +24,7 @@
             <li>
                 <p>户外鞋靴</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
                         <img ng-src={{i.img}} alt="{{i.name}}">
                         <br>休闲鞋
                     </a>
@@ -33,7 +33,7 @@
             <li>
                 <p>户外包配</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
                         <img ng-src={{i.img}} alt="{{i.name}}">
                         <br>休闲鞋
                     </a>

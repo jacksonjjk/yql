@@ -106,5 +106,21 @@ myApp.controller("myController",["$scope","$http",function($scope,$http){
   		$scope.response = response.data;
   		$scope.pagename = window.document.location.hash;
   		$scope.baseurl = baseurl;
+  		$scope.url = baseurl+"/app/index/goodList.html";
+  		var className = "",womanclass=[],childrenclass=[];
+  		for(var i=0;i<response.data.length;i++){
+  			
+  			if(className != response.data[i].class&&response.data[i].pagename=="womanshoes"){
+
+  				womanclass.push(response.data[i].class)
+  			}else if(className != response.data[i].class&&response.data[i].pagename=="happychildren"){
+  				childrenclass.push(response.data[i].class)
+  			}
+  			var className = response.data[i].class;
+  		}
+  		$scope.womanclass = womanclass;
+  		$scope.childrenclass = childrenclass;
+  		console.log($scope.childrenclass)
+
 	})
 }])

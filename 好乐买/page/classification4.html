@@ -5,8 +5,8 @@
                 <p>热门品牌</p>
                 <div class="swiper-hot" style="width:12rem;height:3rem">
                     <div class="cHot swiper-wrapper clear">
-                        <a href="http://www.baidu.com" class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'hots'}">
-                            <img ng-src={{i.img}} alt="{{i.name}}">
+                        <a href={{url}} class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'manshoes','class':'hots'}">
+                            <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                             <br>{{i.name}}
                         </a>
                     </div>
@@ -15,8 +15,8 @@
             <li>
                 <p>运动鞋</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'sportshoe'}">
-                        <img ng-src={{i.img}} alt="{{i.name}}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'xiuxiang'}">
+                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                         <br>{{i.name}}
                     </a>
                 </div>
@@ -24,8 +24,8 @@
             <li>
                 <p>运动服</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
-                        <img ng-src={{i.img}} alt="{{i.name}}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'shangwu'}">
+                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                         <br>{{i.name}}
                     </a>
                 </div>
@@ -33,8 +33,26 @@
             <li>
                 <p>运动包配</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
-                        <img ng-src={{i.img}} alt="{{i.name}}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'chaoxie'}">
+                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
+                        <br>{{i.name}}
+                    </a>
+                </div>
+            </li>
+            <li>
+                <p>运动包配</p>
+                <div class="cGoods clear">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'liangxie'}">
+                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
+                        <br>{{i.name}}
+                    </a>
+                </div>
+            </li>
+            <li>
+                <p>运动包配</p>
+                <div class="cGoods clear">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'dongxue'}">
+                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                         <br>{{i.name}}
                     </a>
                 </div>

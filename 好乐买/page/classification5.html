@@ -5,36 +5,18 @@
                 <p>热门品牌</p>
                 <div class="swiper-hot" style="width:12rem;height:3rem">
                     <div class="cHot swiper-wrapper clear">
-                        <a href="http://www.baidu.com" class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'hots'}">
-                            <img ng-src={{i.img}} alt="{{i.name}}">
+                        <a href={{url}} class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'womanshoes','class':'hots'}">
+                            <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                             <br>{{i.name}}
                         </a>
                     </div>
                 </div>
             </li>
-            <li>
-                <p>运动鞋</p>
+            <li ng-repeat="index in womanclass" ng-if="index!='hots'">
+                <p>{{index}}</p>
                 <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'sportshoe'}">
-                        <img ng-src={{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li>
-            <li>
-                <p>运动服</p>
-                <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
-                        <img ng-src={{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li>
-            <li>
-                <p>运动包配</p>
-                <div class="cGoods clear">
-                    <a href="#" ng-repeat="i in response| filter:{'pagename':'OutdoorClothes','class':'cloth'}">
-                        <img ng-src={{i.img}} alt="{{i.name}}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'womanshoes','class':index}">
+                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                         <br>{{i.name}}
                     </a>
                 </div>
