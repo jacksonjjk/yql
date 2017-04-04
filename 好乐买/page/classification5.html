@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </li>
-            <li ng-repeat="index in womanclass" ng-if="index!='hots'">
+            <li ng-repeat="index in response | myFilter : 'womanshoes'">
                 <p>{{index}}</p>
                 <div class="cGoods clear">
                     <a href={{url}} ng-repeat="i in response| filter:{'pagename':'womanshoes','class':index}">

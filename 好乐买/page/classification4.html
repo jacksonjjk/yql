@@ -12,46 +12,10 @@
                     </div>
                 </div>
             </li>
-            <li>
-                <p>运动鞋</p>
+            <li ng-repeat="index in response | myFilter : 'manshoes'">
+                <p>{{index}}</p>
                 <div class="cGoods clear">
-                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'xiuxiang'}">
-                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li>
-            <li>
-                <p>运动服</p>
-                <div class="cGoods clear">
-                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'shangwu'}">
-                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li>
-            <li>
-                <p>运动包配</p>
-                <div class="cGoods clear">
-                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'chaoxie'}">
-                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li>
-            <li>
-                <p>运动包配</p>
-                <div class="cGoods clear">
-                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'liangxie'}">
-                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li>
-            <li>
-                <p>运动包配</p>
-                <div class="cGoods clear">
-                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':'dongxue'}">
+                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'manshoes','class':index}">
                         <img ng-src=../images/{{i.img}} alt="{{i.name}}">
                         <br>{{i.name}}
                     </a>

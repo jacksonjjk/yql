@@ -12,15 +12,6 @@
                     </div>
                 </div>
             </li>
-            <!-- <li ng-repeat="index in childrenclass" ng-if="index!='hots'">
-                <p>{{index}}</p>
-                <div class="cGoods clear">
-                    <a href={{url}} ng-repeat="i in response| filter:{'pagename':'happychildren','class':index}">
-                        <img ng-src=../images/{{i.img}} alt="{{i.name}}">
-                        <br>{{i.name}}
-                    </a>
-                </div>
-            </li> -->
             <li ng-repeat="index in response | myFilter : 'happychildren'">
                 <p>{{index}}</p>
                 <div class="cGoods clear">

@@ -31,9 +31,12 @@ function init(){
 	cUpdate()
 	function cUpdate(){
 		htmlFontSize();
-		for(var i=0 ; i<myHot.slides.length ; i++){
-			myHot.slides[i].style.width = "3rem";
+		if(myHot.slides){
+			for(var i=0 ; i<myHot.slides.length; i++){
+				myHot.slides[i].style.width = "3rem";
+			}
 		}
+		
 	}
 	function htmlFontSize(){
 		var htmlFontSize = document.getElementsByTagName('html')[0];
@@ -107,20 +110,6 @@ myApp.controller("myController",["$scope","$http",function($scope,$http){
   		$scope.pagename = window.document.location.hash;
   		$scope.baseurl = baseurl;
   		$scope.url = baseurl+"/app/index/goodList.html";
-  		var className = "",womanclass=[],childrenclass=[];
-  		for(var i=0;i<response.data.length;i++){
-  			
-  			if(className != response.data[i].class&&response.data[i].pagename=="womanshoes"){
-
-  				womanclass.push(response.data[i].class)
-  			}else if(className != response.data[i].class&&response.data[i].pagename=="happychildren"){
-  				childrenclass.push(response.data[i].class)
-  			}
-  			var className = response.data[i].class;
-  		}
-  		$scope.womanclass = womanclass;
-  		$scope.childrenclass = childrenclass;
-  		console.log($scope.childrenclass)
 
 	})
 }])
@@ -140,8 +129,14 @@ myApp.filter('myFilter',function(){
 		    var num = arr1[i]['class'];
 		}
 		arr.push(arr1[arr1.length-1]['class']);
-		arr.shift();
-		arr.shift();
+		arr.forEach(function(value,index){
+			if(arr[index]==""){
+				arr.shift();
+			}
+			if(arr[index]=="hots"){
+				arr.shift();
+			}
+		})
 		console.log(arr)
 		return arr;
 	}
