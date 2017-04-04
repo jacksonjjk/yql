@@ -124,3 +124,25 @@ myApp.controller("myController",["$scope","$http",function($scope,$http){
 
 	})
 }])
+myApp.filter('myFilter',function(){
+	return function(array,pagename){
+		var num = "";
+		var arr=[],arr1=[];
+		for(var i = 0; i < array.length; i++){
+			if( array[i]['pagename'] == pagename ){
+				arr1.push(array[i]);
+			}
+		}
+		for (var i = 0; i < arr1.length; i++) {
+		    if(arr1[i]['class'] != num){
+		        arr.push(num);
+		    }
+		    var num = arr1[i]['class'];
+		}
+		arr.push(arr1[arr1.length-1]['class']);
+		arr.shift();
+		arr.shift();
+		console.log(arr)
+		return arr;
+	}
+})
