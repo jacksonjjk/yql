@@ -45,7 +45,6 @@ app.post('/register/register', urlencodedParser,function(request, response) {
           response.end();
         }
         else{
-          console.log('111')
           server.query("INSERT INTO users (username,userpassword) VALUES('"+name+"', '"+password+"')", function (err, data){
             if(err){
               console.log('{err: 1, msg: "数据库出错"}');
@@ -149,7 +148,7 @@ app.get('/page/classification', urlencodedParser, function(request, response){
 app.get('/index', urlencodedParser, function(request, response){
 
 //操作mysql数据库
-  server.query("select * from `goods`",function(err,rs,fields){
+  server.query("select * from goods join okbuy_goods using(uid)",function(err,rs,fields){
     if(err){
       console.log(err);
     }else{
@@ -167,7 +166,7 @@ app.get('/index', urlencodedParser, function(request, response){
   })
 
   app.post("/insert",urlencodedParser,function(req,res){
-    server.query("insert into goods(uid,title,size,price,num) values("+req.body.uid+",'"+req.body.title+"','"+req.body.size+"',"+req.body.price+","+req.body.num+")",function(err,ds){
+    server.query("insert into goods(uid,size,num) values("+req.body.uid+","+req.body.size+","+req.body.num+")",function(err,ds){
       if(err){
         throw err;
       }

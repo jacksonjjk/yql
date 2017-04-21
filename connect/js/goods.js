@@ -39,18 +39,18 @@ define(["jquery","template"],function($,template){
         cart='\
 				<div class="cart">\
 		      <div class="cart_top">\
-		        <span class="hd-activetitl">特价</span><span class="hd-txt">【16-139元！】-艾格-【3.24-3.28】</span>\
+		        <span class="hd-activetitl">特价</span><span class="hd-txt"></span>\
 		    </div>\
 				<div class="cart_bottom">\
 					<div class="cart_bottom_l">\
 						<input type="checkbox" class="select" checked="true">\
 				</div>\
 				<div class="cart_bottom_r">\
-					<a href="/" class="ui_link"><img src="../../img/cart1.jpg"></a>\
+					<a href="/" class="ui_link"><img src="../../img/'+res[i].uimg+'"></a>\
 				</div>\
 				<div class="itemName">\
-						<a href="http://localhost:88/connect/html/details.html?uid='+res[i].uid+'" class="ui_link_1" uid="'+res[i].uid+'">'+res[i].title+'</a>\
-						<p  class="size">尺码:<i>'+res[i].size+'</i><span>￥'+res[i].price+'</span></p>\
+						<a href="http://localhost:88/connect/html/details.html?uid='+res[i].uid+'" class="ui_link_1" uid="'+res[i].uid+'">'+res[i].uname+'</a>\
+						<p  class="size">尺码:<i>'+res[i].size+'</i><span>￥'+res[i].uprice+'</span></p>\
 					<div class="num">\
 						<div class="nummin">\
 							<a class="prp" >-</a>\
@@ -70,7 +70,7 @@ define(["jquery","template"],function($,template){
 	        function sum(num,price){
 						var sum=0;
 						for(var i=0; i<res.length; i++){
-							sum+=res[i].num*res[i].price
+							sum+=res[i].num*res[i].uprice
 						}
 						return sum
 					}
@@ -136,7 +136,7 @@ define(["jquery","template"],function($,template){
 							if($(this).find("span").html() - 0 >=1){
 							update({"uid":uid,"num":$(this).find("span").html() - 0})
 							console.log(uid , $(this).find("span").html() - 0)
-							// location.reload(true);					
+							location.reload(true);					
 							}
 					})
 				$(".del>i").click(function(){
