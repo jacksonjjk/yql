@@ -1,0 +1,35 @@
+<div id="wrapper">
+    <div id="scroller" class="cContent">
+        <ul >
+            <li>
+                <p>热门品牌</p>
+                <div class="swiper-hot" style="width:12rem;height:3rem">
+                    <div class="cHot swiper-wrapper clear">
+                        <a href="http://www.baidu.com" class="swiper-slide" ng-repeat="i in response| filter:{'pagename':'sportwear','class':'hots'}">
+                            <img ng-src={{i.img}} alt="{{i.name}}">
+                            <br>{{i.name}}
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p>男装</p>
+                <div class="cGoods clear">
+                    <a href="#" ng-repeat="i in response| filter:{'pagename':'sportwear','class':'sportshoe'}">
+                        <img ng-src={{i.img}} alt="{{i.name}}">
+                        <br>{{i.name}}
+                    </a>
+                </div>
+            </li>
+            <li>
+                <p>女装</p>
+                <div class="cGoods clear">
+                    <a href="#" ng-repeat="i in response| filter:{'pagename':'sportwear','class':'cloth'}">
+                        <img ng-src={{i.img}} alt="{{i.name}}">
+                        <br>{{i.name}}
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
